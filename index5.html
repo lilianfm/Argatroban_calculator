@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0," />
+
+<title>Argatroban Dosing Calculator</title>
+<link href="argatroban.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="jquery-1.7.2.min.js" type="text/javascript"></script>
+ 
+<script type="text/javascript">  
+ window.onorientationchange = detectIPadOrientation;  
+ function detectIPadOrientation () {  
+  
+    if ( orientation == 0 ) {  
+      document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(-90deg)";
+	  document.getElementsByTagName("body")[0].style.left = "-380px";
+	  document.getElementsByTagName("body")[0].style.top = "544px";  
+    }  
+    else if ( orientation == 90 ) {  
+     document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(0deg)";
+	  document.getElementsByTagName("body")[0].style.left = "0px";
+	  document.getElementsByTagName("body")[0].style.top = "0px"; 
+    }  
+    else if ( orientation == -90 ) {  
+     document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(0deg)";
+	  document.getElementsByTagName("body")[0].style.left = "0px";
+	  document.getElementsByTagName("body")[0].style.top = "0px"; 
+    }  
+    else if ( orientation == 180 ) {  
+    document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(90deg)";
+	  document.getElementsByTagName("body")[0].style.left = "384px";
+	  document.getElementsByTagName("body")[0].style.top = "310px"; 
+    }  
+ }  
+</script> 
+<!--<script language="JavaScript" src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.js" type="text/javascript"></script>-->
+    <script src="phonegap.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+<div class="title">
+<h2>Argatroban Brief Prescribing Information</h2>
+</div><!-- title -->
+
+<div class="centerTablePI">
+
+<div id="PI">
+<h4>HIGHLIGHTS  OF PRESCRIBING INFORMATION</h4>
+<p>These highlights do  not include all the information needed to use Argatroban Injection safely and  effectively. <br>
+  See full prescribing information for Argatroban Injection. </p>
+<p>ARGATROBAN INJECTION,  for intravenous use
+<br>Initial U.S.  Approval: 2000</p>
+<h4>_____________________INDICATIONS  AND USAGE___________________</h4>
+<p>Argatroban Injection  is a direct thrombin inhibitor indicated:</p>
+<ul>
+<li>For prophylaxis or treatment of thrombosis in  adult patients with heparin-induced thrombocytopenia (HIT) </li>
+<li>As an anticoagulant in adult patients with or  at risk for HIT undergoing percutaneous coronary intervention (PCI) </li>
+</ul>
+<h4>__________________DOSAGE  AND ADMINISTRATION_________________</h4>
+<ul>
+<li>Argatroban Injection 250 mg/250 mL premix is  intended for administration to adult patients.</li>
+<li>Discontinue all parenteral anticoagulants  before administering Argatroban Injection.</li>
+<li>Adjust dosing in patients with HIT who have  moderate or severe hepatic impairment. &#13;</li>
+</ul>
+<p><u>Heparin-Induced Thrombocytopenia</u></p>
+<ul>
+<li>Obtain baseline aPTT and start continuous  intravenous (IV) infusion at 2 mcg/kg/minute.</li>
+<li>Adjust dose to achieve steady-state aPTT of  1.5-3 times the baseline value (not to exceed 100 seconds), without exceeding a  rate of
+  10 mcg/kg/minute.</li>
+</ul>
+<p><u>Percutaneous Coronary  Intervention </u></p>
+<ul>
+<li>Start continuous IV infusion at 25 mcg/kg/min  and administer an IV bolus of 350 mcg/kg via a large bore intravenous line over  3-5 minutes.</li>
+<li>Check activated clotting time (ACT) 5-10  minutes after completion of bolus or any dose adjustment.</li>
+<li>PCI procedure can proceed if ACT is greater  than 300 seconds.</li>
+<li>Adjust dose to maintain ACT between 300-450  seconds.</li>
+<li>Once therapeutic ACT (300-450 seconds) has  been achieved, continue same infusion rate for the duration of the procedure.</li>
+<li>If a patient requires anticoagulation after  PCI, argatroban may be continued at 2 mcg/kg/min and adjusted as needed.</li>
+</ul>
+<h4>__________________DOSAGE  FORMS AND STRENGTHS_______________</h4>
+<ul>
+<li>Intravenous injection: 250 mg argatroban in  250 mL sodium chloride (0.77%) premix </li>
+</ul>
+<div><!-- PI -->
+
+</div><!-- centerTable -->
+
+<div class="navigationPI">
+  <a href="index4.html"><img src="images/button_prev.png" width="106" height="60" alt="previous"></a>
+  <a href="index6.html"><img src="images/button_next.png" width="102" height="60" alt="next"></a>
+  </div><!-- navigation -->
+
+</div><!-- container -->
+
+</body>
+</html>

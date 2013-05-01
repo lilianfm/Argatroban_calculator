@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0," />
+<title>Argatroban Dosing Calculator</title>
+<link href="argatroban.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="jquery-1.7.2.min.js" type="text/javascript"></script>
+ 
+<script type="text/javascript">  
+ window.onorientationchange = detectIPadOrientation;  
+ function detectIPadOrientation () {  
+  
+    if ( orientation == 0 ) {  
+      document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(-90deg)";
+	  document.getElementsByTagName("body")[0].style.left = "-380px";
+	  document.getElementsByTagName("body")[0].style.top = "544px";  
+    }  
+    else if ( orientation == 90 ) {  
+     document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(0deg)";
+	  document.getElementsByTagName("body")[0].style.left = "0px";
+	  document.getElementsByTagName("body")[0].style.top = "0px"; 
+    }  
+    else if ( orientation == -90 ) {  
+     document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(0deg)";
+	  document.getElementsByTagName("body")[0].style.left = "0px";
+	  document.getElementsByTagName("body")[0].style.top = "0px"; 
+    }  
+    else if ( orientation == 180 ) {  
+    document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(90deg)";
+	  document.getElementsByTagName("body")[0].style.left = "384px";
+	  document.getElementsByTagName("body")[0].style.top = "310px"; 
+    }  
+ }  
+</script> 
+<!--<script language="JavaScript" src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.js" type="text/javascript"></script>-->
+    <script src="phonegap.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+<div class="title">
+<h2>Dosing Calculation Based on Age, Average Weight, Dose and Number of IV Bags or Vials utilized in a 24-hour period-US Females</h2>
+</div><!-- title -->
+
+<div class="centerTable">
+
+<table border="1" cellspacing="0" cellpadding="0" width="900"
+ id="dosingTable">
+ <tr class="header">
+  <td width="88" rowspan="2">
+  <h4><b>AGE*</b></h4>
+  </td>
+  <td colspan=2>
+  <h4><b>WEIGHT*</b></h4>
+  </td>
+  <td width="95" rowspan=2>
+  <h4><b>DOSE (mcg/kg/min)</b></h4>
+  </td>
+  <td width="89" rowspan=2>
+  <h4><b>mg/hr</b></h4>
+  </td>
+  <td width="88"  rowspan=2>
+  <h4><b>24 hrs</b></h4>
+  </td>
+  <td width="90" rowspan=2>
+  <h4><b># 250 mg/<span class=SpellE>mL</span> bags-vials<br>
+  24 hrs</b></h4>
+  </td>
+  <td width="90" rowspan=2>
+  <h4><b># 125 mg/<span class=SpellE>mL</span> vials <br>
+  24 hrs </b></h4>
+  </td>
+  <td width="154" rowspan=2>
+  <h4><b># 50 mg/<span class=SpellE>mL</span> <br> vials <br>
+  24 hrs</b></h4>
+  </td>
+  <!--<td width=0 height=40></td>-->
+ </tr>
+ 
+ <tr class="header">
+  <td width="56">
+  <h4>lbs</h4>
+  </td>
+  <td width="58">
+  <h4>kg</h4>
+  </td>
+  <!--<td width=0 height=40></td>-->
+ </tr>
+ 
+ <tr>  <!-- row 1 -->
+  <td>
+  <p>20+ </p>
+  </td>
+  <td>
+  <p>162.9</p>
+  </td>
+  <td>
+  <p>74.0</p>
+  </td>
+  <td rowspan=8>
+  <p>2 mcg</p>
+  </td>
+  <td>
+  <p>8.9</p>
+  </td>
+  <td>
+  <p>213.6</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>2</p>
+  </td>
+  <td>
+  <p>5</p>
+  </td>
+<!--<td width=0 height=40></td>-->
+ </tr>
+ 
+ <tr>  <!-- row 2-->
+  <td>
+  <p>20-74</p>
+  </td>
+  <td>
+  <p>164.3</p>
+  </td>
+  <td>
+  <p>74.7</p>
+  </td>
+  <td>
+  <p>9.0</p>
+  </td>
+  <td>
+  <p>216.0</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>2</p>
+  </td>
+  <td>
+  <p>5</p>
+  </td>
+  <!--<td width=0 height=40></td>-->
+ </tr>
+ 
+ <tr>  <!-- row 3-->
+  <td>
+  <p>20-29</p>
+  </td>
+  <td>
+  <p>156.5</p>
+  </td>
+  <td>
+  <p>71.1</p>
+  </td>
+  <td>
+  <p>8.5</p>
+  </td>
+  <td>
+  <p>204.0</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>2</p>
+  </td>
+  <td>
+  <p>5</p>
+  </td>
+ <!--<td width=0 height=40></td>-->
+ </tr>
+ 
+ <tr>  <!-- row 4-->
+  <td>
+  <p>30-39</p>
+  </td>
+  <td>
+  <p>163.0</p>
+  </td>
+  <td>
+  <p>74.1</p>
+  </td>
+  <td>
+  <p>8.9</p>
+  </td>
+  <td>
+  <p>213.6</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>2</p>
+  </td>
+  <td>
+  <p>5</p>
+  </td>
+  <!--<td width=0 height=40></td>-->
+ </tr>
+ 
+ <tr>  <!-- row 5-->
+  <td>
+  <p>40-49</p>
+  </td>
+  <td>
+  <p>168.2</p>
+  </td>
+  <td>
+  <p>76.5</p>
+  </td>
+  <td>
+  <p>9.2</p>
+  </td>
+  <td>
+  <p>220.8</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>2</p>
+  </td>
+  <td>
+  <p>5</p>
+  </td>
+ </tr>
+ 
+ 
+ <tr>  <!-- row 6-->
+  <td>
+  <p>50-59</p>
+  </td>
+  <td>
+  <p>169.2</p>
+  </td>
+  <td>
+  <p>76.9</p>
+  </td>
+  <td>
+  <p>9.2</p>
+  </td>
+  <td>
+  <p>220.8</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>2</p>
+  </td>
+  <td>
+  <p>5</p>
+  </td>
+ </tr>
+ 
+ <tr>  <!-- row 7-->
+  <td>
+  <p>60-74</p>
+  </td>
+  <td>
+  <p>164.7</p>
+  </td>
+  <td>
+  <p>74.9</p>
+  </td>
+  <td>
+  <p>9.0</p>
+  </td>
+  <td>
+  <p>216.0</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>2</p>
+  </td>
+  <td>
+  <p>5</p>
+  </td>
+ </tr>
+ 
+ <tr>  <!-- row 8-->
+  <td>
+  <p>75+</p>
+  </td>
+  <td>
+  <p>146.6</p>
+  </td>
+  <td>
+  <p>66.6</p>
+  </td>
+  <td>
+  <p>8.0</p>
+  </td>
+  <td>
+  <p>192.0</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>2</p>
+  </td>
+  <td>
+  <p>4</p>
+  </td>
+ </tr>
+ 
+ <tr>  <!-- row 9-->
+  <td>
+  <p>20+ </p>
+  </td>
+  <td>
+  <p>162.9</p>
+  </td>
+  <td>
+  <p>74.0</p>
+  </td>
+  <td rowspan="9">
+  <p>1 mcg</p>
+  </td>
+  <td>
+  <p>4.4</p>
+  </td>
+  <td>
+  <p>105.6</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>3</p>
+  </td>
+ </tr>
+ 
+ <tr>  <!-- row 10-->
+  <td>
+  <p>20-74</p>
+  </td>
+  <td>
+  <p>164.3</p>
+  </td>
+  <td>
+  <p>74.7</p>
+  </td>
+  <td>
+  <p>4.5</p>
+  </td>
+  <td>
+  <p>108.0</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>3</p>
+  </td>
+  </tr>
+  
+  
+ <tr>  <!-- row 11-->
+  <td>
+  <p>20-29</p>
+  </td>
+  <td>
+  <p>156.5</p>
+  </td>
+  <td>
+  <p>71.1</p>
+  </td>
+  <td>
+  <p>4.3</p>
+  </td>
+  <td>
+  <p>103.2</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>3</p>
+  </td>
+ </tr>
+ 
+ <tr>  <!-- row 12-->
+  <td>
+  <p>30-39</p>
+  </td>
+  <td>
+  <p>163.0</p>
+  </td>
+  <td>
+  <p>74.1</p>
+  </td>
+  <td>
+  <p>4.5</p>
+  </td>
+  <td>
+  <p>108.0</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>3</p>
+  </td>
+  </tr>
+  
+ <tr>  <!-- row 13-->
+  <td>
+  <p>40-49</p>
+  </td>
+  <td>
+  <p>168.2</p>
+  </td>
+  <td>
+  <p>76.5</p>
+  </td>
+  <td>
+  <p>4.6</p>
+  </td>
+  <td>
+  <p>110.4</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>3</p>
+  </td>
+  </tr>
+  
+ <tr>  <!-- row 14-->
+  <td>
+  <p>50-59</p>
+  </td>
+  <td>
+  <p>169.2</p>
+  </td>
+  <td>
+  <p>76.9</p>
+  </td>
+  <td>
+  <p>4.6</p>
+  </td>
+  <td>
+  <p>110.4</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>3</p>
+  </td>
+  </tr>
+  
+ <tr>  <!-- row 15-->
+  <td>
+  <p>60-74</p>
+  </td>
+  <td>
+  <p>164.7</p>
+  </td>
+  <td>
+  <p>74.9</p>
+  </td>
+  <td>
+  <p>4.5</p>
+  </td>
+  <td>
+  <p>108.0</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>3</p>
+  </td>
+ </tr>
+ 
+ 
+ <tr>  <!-- row 16-->
+  <td>
+  <p>75+</p>
+  </td>
+  <td>
+  <p>146.6</p>
+  </td>
+  <td>
+  <p>66.6</p>
+  </td>
+  <td>
+  <p>4.0</p>
+  </td>
+  <td>
+  <p>96.0</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>1</p>
+  </td>
+  <td>
+  <p>3</p>
+  </td>
+  <!--<td width=0 height=40></td>-->
+ </tr>
+</table>
+<p class="mouseType">* Advanced data from Vitals and Health Statistics CDC Number 347, October 27, 2004</p>
+</div><!-- centerTable -->
+
+<div class="navigation">
+  <a href="index2.html"><img src="images/button_prev.png" width="106" height="60" alt="previous"></a>
+  <a href="index4.html"><img src="images/button_next.png" width="102" height="60" alt="next"></a>
+  </div><!-- navigation -->
+
+</div><!-- container -->
+
+</body>
+</html>

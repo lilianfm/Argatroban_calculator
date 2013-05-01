@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0," />
+
+<title>Argatroban Dosing Calculator</title>
+<link href="argatroban.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="jquery-1.7.2.min.js" type="text/javascript"></script>
+ 
+<script type="text/javascript">  
+ window.onorientationchange = detectIPadOrientation;  
+ function detectIPadOrientation () {  
+  
+    if ( orientation == 0 ) {  
+      document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(-90deg)";
+	  document.getElementsByTagName("body")[0].style.left = "-380px";
+	  document.getElementsByTagName("body")[0].style.top = "544px";  
+    }  
+    else if ( orientation == 90 ) {  
+     document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(0deg)";
+	  document.getElementsByTagName("body")[0].style.left = "0px";
+	  document.getElementsByTagName("body")[0].style.top = "0px"; 
+    }  
+    else if ( orientation == -90 ) {  
+     document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(0deg)";
+	  document.getElementsByTagName("body")[0].style.left = "0px";
+	  document.getElementsByTagName("body")[0].style.top = "0px"; 
+    }  
+    else if ( orientation == 180 ) {  
+    document.getElementsByTagName("body")[0].style.webkitTransform = "rotate(90deg)";
+	  document.getElementsByTagName("body")[0].style.left = "384px";
+	  document.getElementsByTagName("body")[0].style.top = "310px"; 
+    }  
+ }  
+</script> 
+    <script src="phonegap.js"></script>
+
+<!-- 
+<script language="JavaScript" src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.js" type="text/javascript"></script>-->
+
+</head>
+
+<body orient="landscape">
+
+<div class="container">
+<div class="centerHome">
+<h1>Argatroban Body Weight Based<br />Dosing Calculator for Heparin-Induced Thrombocytopenia</h1>
+
+<div class="logo"><img src="images/Argatroban-Update-Logo-e4-FINAL.png" width="400" height="169" alt="Argatroban: Ready to use. The premix solution" align="center">
+</div><!-- logo -->
+<div id="enter"><a href="index2.html"><img src="images/Enter Buton.jpg" width="150" height="62" alt="enter" align="center"></a></div><!-- enter -->
+</div><!-- centerHome -->
+</div><!-- container -->
+
+</body>
+</html>
